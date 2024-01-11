@@ -1,0 +1,46 @@
+{
+  "displayName": "Wi-SUN Smart Meter",
+  "name": "homebridge-plugin-wisun-smartmeter",
+  "version": "0.0.1",
+  "description": "Wi-SUN ECHONET via USB device (such as RL7023 Stick-D/IPS)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kumabook/homebridge-plugin-wisun-echonet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kumabook/homebridge-plugin-wisun-echonet.git/issues"
+  },
+  "engines": {
+    "node": ">=14.18.1",
+    "homebridge": ">=1.3.5"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint src/**.ts --max-warnings=0",
+    "watch": "npm run build && nodemon",
+    "build": "rimraf ./dist && tsc",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "files": [
+    "config.schema.json",
+    "src/**/*",
+    "dist/**/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^16.10.9",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "axios": "^1.6.5",
+    "eslint": "^8.0.1",
+    "homebridge": "^1.3.5",
+    "node-wisunrb": "^0.1.0",
+    "nodemon": "^2.0.20",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  }
+}

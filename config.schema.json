@@ -1,0 +1,45 @@
+{
+  "pluginAlias": "WiSunSmartMeter",
+  "pluginType": "platform",
+  "singular": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "default": "WiSUN Smart Meter",
+        "required": true
+      },
+      "serialPortPath": {
+        "title": "Serial port path",
+        "type": "string",
+        "required": true,
+        "default": "/dev/ttyUSB0"
+      },
+      "brouteId": {
+        "title": "B route ID",
+        "type": "string",
+        "required": true,
+        "default": "00000000000000000000000000000000"
+      },
+      "broutePassword": {
+        "title": "B route password",
+        "type": "string",
+        "required": true,
+        "default": "XXXXXXXXXXXX"
+      },
+      "alertThreshold": {
+        "title": "Alert threshold",
+        "type": "number",
+        "required": true,
+        "default": 87.5
+      },
+      "mackerel_api_key": {
+        "title": "mackerel api key",
+        "type": "string",
+        "required": false,
+      }
+    }
+  }
+}
